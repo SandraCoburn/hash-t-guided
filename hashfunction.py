@@ -1,5 +1,5 @@
 HASH_DATA_SIZE = 8
-hash_data = [0] * HASH_DATA_SIZE
+hash_data = [None] * HASH_DATA_SIZE
 #This function will look for the byte code of input
 def hash_function(s):
     """ Naive hashing funciton -- do not use in production"""
@@ -20,12 +20,20 @@ def get_index(s):
 def put(k,v):
     #For a given key, store a value in that hash table
     index = get_index(k)
+    if hash_data[index] is not None:
+        print("Colliton!!")
     hash_data[index] = v
+
+    #To store it in HashTableEntry
+    #hash_data[index] = HashTableEntry(k,v) 
 
 def get(k):
     #for a given key return the value
     index = get_index(k)
     return hash_data[index]
+def delete(k):
+    index = get_index(k)
+    hash_data[index] = None
 
 print(hash_data)
 index = get_index("Sandra!")

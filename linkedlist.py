@@ -1,9 +1,9 @@
-class Node:
+class Node: #this corresponds to the HashEntryTable class
     def __init__(self, value):
         self.value = value
         self.next = None
 
-class LinkedList:
+class LinkedList: #this corresponds to the HashTable Class
     def __init__(self):
         self.head = None
     def find(self, value):
