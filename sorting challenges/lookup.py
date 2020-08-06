@@ -5,6 +5,7 @@ lookup_table = {}
 #     lookup_table[i] = 1/math.sqrt(i)
 def inv_sqrt(n):
     '''n is an integer between 1 and 1000'''
+    #Lazily build lookup table
     if n not in lookup_table:
         lookup_table[n] = 1/math.sqrt(n)
     # return 1 / math.sqrt(n)
