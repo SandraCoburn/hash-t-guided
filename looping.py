@@ -1,6 +1,7 @@
 l = [1,2,3,4,5,1,2,3,4,5,7,1,1,2,4,3,8] * 10
 ht = {}
 print("Building hash table:")
+#By building the hashtable we reduce the time complexity in the is_in_list function
 for x in l: #O(n)
     ht[x] = True
 def is_in_list(n):
