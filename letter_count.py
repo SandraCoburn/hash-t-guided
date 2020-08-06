@@ -1,5 +1,6 @@
 def letter_count(s):
     d = {}
+    ignored = ['"', ':', ';', ',', '.', '-','+',' =',' /',' \','|','[',']','{', '}', '(', ')',' *', '^', '&']
     for c in s:
         if c.isspace(): #ignore spaces
             continue
