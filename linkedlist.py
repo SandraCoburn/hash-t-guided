@@ -24,14 +24,14 @@ class LinkedList: #this corresponds to the HashTable Class
         if cur.value == value:
             self.head = cur.nex
             return cur
-        prev = cur
+        #prev = cur
         cur = cur.next
         while cur is not None:
             if cur.value == value:
                 self.head = cur.next
                 return cur
             else:
-                prev = cur
+                #prev = cur
                 cur = cur.next
         return None
         

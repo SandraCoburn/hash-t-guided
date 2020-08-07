@@ -13,7 +13,7 @@ for i in range(100):
 
 cache = {} #O(n)
 def fib(n):
-    if n<= 1:
+    if n <= 1:
         return n
     if n not in cache:
         cache[n] = fib(n-1) + fib(n-2) #it will save the calculcations in cache so it won't do it again
@@ -24,8 +24,8 @@ for i in range(100):
 
 '''You can add a cache with two parameters too:'''
 cache = {} #O(n)
-def abc(x,y):
+# def abc(x,y):
 
-    if (x,y) not in cache:
-        cache[x,y] = fib(n-1) + fib(n-2) #it will save the calculcations in cache so it won't do it again
-    return cache[x,y]
+#     if (x,y) not in cache:
+#         cache[x,y] = fib(n-1) + fib(n-2) #it will save the calculcations in cache so it won't do it again
+#     return cache[x,y]
